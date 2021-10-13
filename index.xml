@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sean C. Crosby</title>
+    <link>https://sccrosby.github.io/</link>
+    <description>Recent content on Sean C. Crosby</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Oct 2021 20:28:20 -0700</lastBuildDate><atom:link href="https://sccrosby.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oceanography</title>
+      <link>https://sccrosby.github.io/top/oceanography/</link>
+      <pubDate>Tue, 12 Oct 2021 20:28:20 -0700</pubDate>
+      
+      <guid>https://sccrosby.github.io/top/oceanography/</guid>
+      <description>Waves in Estuaries One’s first though when considering ocean waves might be those that roll gently up our beaches, providing endless entertainment of surfers, body boarders, and beach goers alike. However, waves drive many processes along our coastlines including, beach erosion, coastal flooding, and alongshore transport of sediment, larvae and pollutants. Additionally, large wave energy provide a significant hazard to coastal infrastructure, beach goers and commercial and recreational boating. Therefore accurate, unbiased, high-resolution nearshore wave predictions are needed by both local communities and researchers.</description>
+    </item>
+    
+    <item>
+      <title>P002 Working with Empirical Orthongal Functions</title>
+      <link>https://sccrosby.github.io/post/post002/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sccrosby.github.io/post/post002/</guid>
+      <description>Today I was wondering if I can make some sense of a rather large 60-year hindcast of winds in Washington around the Salish Sea. Could I see what the typical wind patterns in the region are? How can I manage this with a rather hefty 1+GB set of spatial wind predictions? This is a good opportunity to explore empirical orthonganal functions (EOFs), also known as principle component analysis (PCA).
+What is an EOF?</description>
+    </item>
+    
+    <item>
+      <title>P001 Transistioning to data science</title>
+      <link>https://sccrosby.github.io/post/post001/</link>
+      <pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sccrosby.github.io/post/post001/</guid>
+      <description>This is the beginning of a data odyssey, re-tooling my background in oceanography to the rapidly evolving field of data science. After 10-years in the geosciences I am interested in pursuing something new, faster-paced, and more lucrative. I decided to write this blog, not neccessarily expecting anyone to read it, but primarily for my own record keeping as I learn explore a new set of data analysis tools and whatever interesting datasets I can get my hands.</description>
+    </item>
+    
+  </channel>
+</rss>
