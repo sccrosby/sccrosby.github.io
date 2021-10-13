@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="P002 Working with Empirical Orthongal Functions" />
-    <meta property="og:title" content="P002 Working with Empirical Orthongal Functions" />
-    <meta property="twitter:title" content="P002 Working with Empirical Orthongal Functions" />
+    <meta name="title" content="P002 Working with Empirical Orthogonal Functions" />
+    <meta property="og:title" content="P002 Working with Empirical Orthogonal Functions" />
+    <meta property="twitter:title" content="P002 Working with Empirical Orthogonal Functions" />
     
 
     
@@ -34,7 +34,7 @@
     <meta name="keyword"  content="Python, Matlab, SQL, , Raspberry, Pi, Docker, Kubernetes, Go, Golang, Microservice">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>P002 Working with Empirical Orthongal Functions-Sean C. Crosby Blog</title>
+    <title>P002 Working with Empirical Orthogonal Functions-Sean C. Crosby Blog</title>
 
     <link rel="canonical" href="/post/post002/">
 
@@ -166,7 +166,7 @@
                         </a>
                         
                     </div>
-                    <h1>P002 Working with Empirical Orthongal Functions</h1>
+                    <h1>P002 Working with Empirical Orthogonal Functions</h1>
                     <h2 class="subheading">Using complex EOFs (aka PCA) to find common wind patterns</h2>
                     <span class="meta">
                         
@@ -175,7 +175,7 @@
                                      &#34;Sean C. Crosby&#34;
                              
                             on 
-                            Monday, October 12, 2020
+                            Tuesday, October 13, 2020
                             
                             
                             
@@ -201,9 +201,9 @@
                 post-container">
 
                 
-                <p>Today I was wondering if I can make some sense of a rather large 60-year hindcast of winds in Washington around the Salish Sea. Could I see what the typical wind patterns in the region are? How can I manage this with a rather hefty 1+GB set of spatial wind predictions? This is a good opportunity to explore empirical orthonganal functions (EOFs), also known as principle component analysis (PCA).</p>
-<p>What is an EOF? An EOF is the decomposition of a data set in terms of orthogonal basis functions. This set of basis functions will contain all the information in the dataset, but broken into empricial functions that are most different from each other (orthogonal) and account for the most amount of variance as possible. These are typically ordered by the amount of variance accounted for, with the most the first in the matrix. In my example here I have 1271 grid locations (a 31 x 41 grid) and 89,000 time steps.</p>
-<p>Because of memory limitations, I&rsquo;ve restricted the EOF analysis to 20,000 time steps. Generating the orthogonal functions is just a single line, calling a function to perform a singular value decomposition (svd, available in numpy.linalg). I provide my 1271 x 20,000 element matrix of wind predictions, call it W, and what I end up with is three matrices, S, V, and D, such that W = SVD. S is 1271 x 1271 and is my set of orthogonal functions across space and D is similarly those functions in time (20,000x20,000). V is a diagonal matrix who&rsquo;s values correspond to the variance represented by each orthgonal function. The variance of the first functions represent about 7, 7, and 5% (19%) of the overall variance. This might not be considered a lot, but nearly 20% of the spatial variability can be described by just 3 patterns! In this case 3 of the 1271 possible.</p>
+                <p>Today I was wondering if I can make some sense of a rather large 60-year hindcast of winds in Washington around the Salish Sea. Could I see what the typical wind patterns in the region are? How can I manage this with a rather hefty 1+GB set of spatial wind predictions? This is a good opportunity to explore empirical orthogonal functions (EOFs), also known as principle component analysis (PCA).</p>
+<p>What is an EOF? An EOF is the decomposition of a data set in terms of orthogonal basis functions. This set of basis functions will contain all the information in the dataset, but broken into empirical functions that are most different from each other (orthogonal) and account for the most amount of variance as possible. These are typically ordered by the amount of variance accounted for, with the most the first in the matrix. In my example here I have 1271 grid locations (a 31 x 41 grid) and 89,000 time steps.</p>
+<p>Because of memory limitations, I&rsquo;ve restricted the EOF analysis to 20,000 time steps. Generating the orthogonal functions is just a single line, calling a function to perform a singular value decomposition (svd, available in numpy.linalg). I provide my 1271 x 20,000 element matrix of wind predictions, call it W, and what I end up with is three matrices, S, V, and D, such that W = SVD. S is 1271 x 1271 and is my set of orthogonal functions across space and D is similarly those functions in time (20,000x20,000). V is a diagonal matrix who&rsquo;s values correspond to the variance represented by each orthogonal function. The variance of the first functions represent about 7, 7, and 5% (19%) of the overall variance. This might not be considered a lot, but nearly 20% of the spatial variability can be described by just 3 patterns! In this case 3 of the 1271 possible.</p>
 <p>
   <img src="/img/wind_eof_plot.png" alt="Example image">
 
@@ -213,7 +213,8 @@
   <img src="/img/wind_eof_map.png" alt="Example image">
 
 </p>
-<p>What I really enjoyed seeing was the effects of the olympic mountains on winds just to the East. You can see what looks like a swirl in all of the modes. Wrapping up I&rsquo;ll link an interactive html file <a href="https://github.com/sccrosby/python_data_explorations/blob/main/wind_eof_map.html">here</a> and the jupyter notebook used in the analysis described is <a href="https://github.com/sccrosby/python_data_explorations/blob/main/eda_002_eof_wind_field.ipynb">here</a>. If you&rsquo;d like data please get in touch.</p>
+<p>What I really enjoyed seeing was the effects of the Olympic mountains on winds just to the East. You can see what looks like a swirl in all of the modes. Wrapping up I&rsquo;ll link an interactive html file <a href="https://github.com/sccrosby/python_data_explorations/blob/main/wind_eof_map.html">here</a> and the jupyter notebook used in the analysis described is <a href="https://github.com/sccrosby/python_data_explorations/blob/main/eda_002_eof_wind_field.ipynb">here</a>. If you&rsquo;d like data please get in touch.</p>
+<p>An aside that I didn&rsquo;t mention above. Wind vectors have two components whereas what is described above assumes just a single value, like say winds speed. However, with a vector you can use complex notation to represent the two dimensions under a single matrix such that <em>U = u + iv</em>. Here, the northward component, v, is imaginary. The computation is the same, but at the end you&rsquo;ll need to take the real and imaginary parts to recreate the vector</p>
 
 
                 
@@ -222,7 +223,7 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/post/post001/" data-toggle="tooltip" data-placement="top" title="P001 Transistioning to data science">&larr;
+                        <a href="/post/post001/" data-toggle="tooltip" data-placement="top" title="P001 Transitioning to data science">&larr;
                             Previous Post</a>
                     </li>
                     

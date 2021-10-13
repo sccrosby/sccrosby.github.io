@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Geoscience on Sean C. Crosby</title>
-    <link>https://sccrosby.github.io/categories/geoscience/</link>
-    <description>Recent content in Geoscience on Sean C. Crosby</description>
+    <title>Meteorology on Sean C. Crosby</title>
+    <link>https://sccrosby.github.io/categories/meteorology/</link>
+    <description>Recent content in Meteorology on Sean C. Crosby</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sccrosby.github.io/categories/geoscience/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sccrosby.github.io/categories/meteorology/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>P002 Working with Empirical Orthogonal Functions</title>
       <link>https://sccrosby.github.io/post/post002/</link>
