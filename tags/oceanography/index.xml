@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Sean C. Crosby</title>
-    <link>https://sccrosby.github.io/post/</link>
-    <description>Recent content in Posts on Sean C. Crosby</description>
+    <title>Oceanography on Sean C. Crosby</title>
+    <link>https://sccrosby.github.io/tags/oceanography/</link>
+    <description>Recent content in Oceanography on Sean C. Crosby</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sccrosby.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sccrosby.github.io/tags/oceanography/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>P003 Ray Tracing for Ocean Wave Transformation</title>
       <link>https://sccrosby.github.io/post/post003/</link>
@@ -24,15 +24,6 @@
       
       <guid>https://sccrosby.github.io/post/post002/</guid>
       <description>Today I was wondering if I can make some sense of a rather large 60-year hindcast of winds in Washington around the Salish Sea. Could I see what the typical wind patterns in the region are? How can I manage this with a rather hefty 1+GB set of spatial wind predictions? This is a good opportunity to explore empirical orthogonal functions (EOFs), also known as principle component analysis (PCA).</description>
-    </item>
-    
-    <item>
-      <title>P001 Transitioning to data science</title>
-      <link>https://sccrosby.github.io/post/post001/</link>
-      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://sccrosby.github.io/post/post001/</guid>
-      <description>This is the beginning of a data odyssey, re-tooling my background in oceanography to the rapidly evolving field of data science. After 10-years in the geosciences I am interested in pursuing something new, faster-paced, and more lucrative. I decided to write this blog, not necessarily expecting anyone to read it, but primarily for my own record keeping as I learn explore a new set of data analysis tools and whatever interesting datasets I can get my hands.</description>
     </item>
     
   </channel>

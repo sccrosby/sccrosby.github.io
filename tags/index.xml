@@ -6,22 +6,31 @@
     <description>Recent content in Tags on Sean C. Crosby</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sccrosby.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sccrosby.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>eof</title>
-      <link>https://sccrosby.github.io/tags/eof/</link>
-      <pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
+      <title>Oceanography</title>
+      <link>https://sccrosby.github.io/tags/oceanography/</link>
+      <pubDate>Sun, 17 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://sccrosby.github.io/tags/eof/</guid>
+      <guid>https://sccrosby.github.io/tags/oceanography/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>meteorology</title>
-      <link>https://sccrosby.github.io/tags/meteorology/</link>
-      <pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
+      <title>Repositories</title>
+      <link>https://sccrosby.github.io/tags/repositories/</link>
+      <pubDate>Sun, 17 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://sccrosby.github.io/tags/meteorology/</guid>
+      <guid>https://sccrosby.github.io/tags/repositories/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Science</title>
+      <link>https://sccrosby.github.io/tags/data-science/</link>
+      <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sccrosby.github.io/tags/data-science/</guid>
       <description></description>
     </item>
     

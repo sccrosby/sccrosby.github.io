@@ -6,30 +6,49 @@
     <description>Recent content on Sean C. Crosby</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Oct 2021 20:28:20 -0700</lastBuildDate><atom:link href="https://sccrosby.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sccrosby.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Oceanography</title>
-      <link>https://sccrosby.github.io/top/oceanography/</link>
+      <title>P003 Ray Tracing for Ocean Wave Transformation</title>
+      <link>https://sccrosby.github.io/post/post003/</link>
+      <pubDate>Sun, 17 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sccrosby.github.io/post/post003/</guid>
+      <description>$$x + y$$
+</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://sccrosby.github.io/top/about/</link>
+      <pubDate>Wed, 13 Oct 2021 10:24:31 -0700</pubDate>
+      
+      <guid>https://sccrosby.github.io/top/about/</guid>
+      <description>I am a Coastal Oceanographer at the U. S. Geological Survey working with Dr. Eric E. Grossman. Additionally, I am Research Affiliate at Western Washington University mentoring with graduate students in the Geology and Environmental Sciences Departments and occasionally teach Oceanography of the Salish Sea (ESCI491) for the Huxley College of the Environment.
+My research interests are inspired by the intersection of land and sea. I study coastal processes including regional wave transformation; high water level modeling (episodic flooding and long-term inundation); sediment transport, beach erosion, and cliff retreat.</description>
+    </item>
+    
+    <item>
+      <title>Academic Research</title>
+      <link>https://sccrosby.github.io/top/research/</link>
       <pubDate>Tue, 12 Oct 2021 20:28:20 -0700</pubDate>
       
-      <guid>https://sccrosby.github.io/top/oceanography/</guid>
+      <guid>https://sccrosby.github.io/top/research/</guid>
       <description>Waves in Estuaries One’s first though when considering ocean waves might be those that roll gently up our beaches, providing endless entertainment of surfers, body boarders, and beach goers alike. However, waves drive many processes along our coastlines including, beach erosion, coastal flooding, and alongshore transport of sediment, larvae and pollutants. Additionally, large wave energy provide a significant hazard to coastal infrastructure, beach goers and commercial and recreational boating. Therefore accurate, unbiased, high-resolution nearshore wave predictions are needed by both local communities and researchers.</description>
     </item>
     
     <item>
       <title>P002 Working with Empirical Orthogonal Functions</title>
       <link>https://sccrosby.github.io/post/post002/</link>
-      <pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://sccrosby.github.io/post/post002/</guid>
-      <description>Today I was wondering if I can make some sense of a rather large 60-year hindcast of winds in Washington around the Salish Sea. Could I see what the typical wind patterns in the region are? How can I manage this with a rather hefty 1+GB set of spatial wind predictions? This is a good opportunity to explore empirical orthogonal functions (EOFs), also known as principle component analysis (PCA).
-What is an EOF?</description>
+      <description>Today I was wondering if I can make some sense of a rather large 60-year hindcast of winds in Washington around the Salish Sea. Could I see what the typical wind patterns in the region are? How can I manage this with a rather hefty 1+GB set of spatial wind predictions? This is a good opportunity to explore empirical orthogonal functions (EOFs), also known as principle component analysis (PCA).</description>
     </item>
     
     <item>
       <title>P001 Transitioning to data science</title>
       <link>https://sccrosby.github.io/post/post001/</link>
-      <pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://sccrosby.github.io/post/post001/</guid>
       <description>This is the beginning of a data odyssey, re-tooling my background in oceanography to the rapidly evolving field of data science. After 10-years in the geosciences I am interested in pursuing something new, faster-paced, and more lucrative. I decided to write this blog, not necessarily expecting anyone to read it, but primarily for my own record keeping as I learn explore a new set of data analysis tools and whatever interesting datasets I can get my hands.</description>
