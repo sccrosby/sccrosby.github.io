@@ -6,7 +6,16 @@
     <description>Recent content on Sean C. Crosby</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sccrosby.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sccrosby.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>P004 Swiss dog dataset suggest owners slightly prefer dog of the same gender</title>
+      <link>https://sccrosby.github.io/post/post004/</link>
+      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sccrosby.github.io/post/post004/</guid>
+      <description>I stumbled on this dataset on Kaggle of dogs and their owners in Switzerland. With a little help from google translation it becomes clear that there is a relatively substantial dataset of around 6,000 dogs and their owners including dog gender, dog breed, owner gender, owner age, and a few other bits of information. To practice working with pandas data frames and some simple regressions I entertained a few questions, such as, what is the most popular dog color?</description>
+    </item>
+    
     <item>
       <title>P003 Ray Tracing for Ocean Wave Transformation</title>
       <link>https://sccrosby.github.io/post/post003/</link>
@@ -32,7 +41,7 @@ My research interests are inspired by the intersection of land and sea. I study 
       <pubDate>Tue, 12 Oct 2021 20:28:20 -0700</pubDate>
       
       <guid>https://sccrosby.github.io/top/research/</guid>
-      <description>Waves in Estuaries One’s first though when considering ocean waves might be those that roll gently up our beaches, providing endless entertainment of surfers, body boarders, and beach goers alike. However, waves drive many processes along our coastlines including, beach erosion, coastal flooding, and alongshore transport of sediment, larvae and pollutants. Additionally, large wave energy provide a significant hazard to coastal infrastructure, beach goers and commercial and recreational boating. Therefore accurate, unbiased, high-resolution nearshore wave predictions are needed by both local communities and researchers.</description>
+      <description>One’s first thought when considering ocean waves might be those that roll gently up our beaches, providing endless entertainment of surfers, body boarders, and beach goers alike. However, waves drive many processes along our coastlines including, beach erosion, coastal flooding, and alongshore transport of sediment, larvae and pollutants. Additionally, large wave energy provide a significant hazard to coastal infrastructure, beach goers and commercial and recreational boating. Therefore accurate, unbiased, high-resolution nearshore wave predictions are needed by both local communities and researchers.</description>
     </item>
     
     <item>
