@@ -6,18 +6,18 @@
     <description>Recent content in Data Science on Sean C. Crosby</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sccrosby.github.io/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sccrosby.github.io/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>P004 Swiss dog dataset suggest owners slightly prefer dog of the same gender</title>
+      <title>P004 Swiss dog dataset suggest owners slightly prefer dog of the same gender, maybe</title>
       <link>https://sccrosby.github.io/post/post004/</link>
-      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 26 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://sccrosby.github.io/post/post004/</guid>
       <description>I stumbled on this dataset on Kaggle of dogs and their owners in Switzerland. With a little help from google translation it becomes clear that there is a relatively substantial dataset of around 6,000 dogs and their owners including dog gender, dog breed, owner gender, owner age, and a few other bits of information. To practice working with pandas data frames and some simple regressions I entertained a few questions, such as, what is the most popular dog color?</description>
     </item>
     
     <item>
-      <title>P002 Working with Empirical Orthogonal Functions</title>
+      <title>P002 Working with empirical orthogonal functions</title>
       <link>https://sccrosby.github.io/post/post002/</link>
       <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
       
