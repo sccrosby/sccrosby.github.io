@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="P004 Swiss dog dataset suggest owners slightly prefer dog of the same gender, maybe" />
-    <meta property="og:title" content="P004 Swiss dog dataset suggest owners slightly prefer dog of the same gender, maybe" />
-    <meta property="twitter:title" content="P004 Swiss dog dataset suggest owners slightly prefer dog of the same gender, maybe" />
+    <meta name="title" content="Do dog owners prefer dogs of the same gender?" />
+    <meta property="og:title" content="Do dog owners prefer dogs of the same gender?" />
+    <meta property="twitter:title" content="Do dog owners prefer dogs of the same gender?" />
     
 
     
@@ -34,7 +34,7 @@
     <meta name="keyword"  content="Python, Matlab, SQL, Oceanography, Machine Learning, Deep Learning, Neural Networks, Data Analysis, Inverse Theory">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>P004 Swiss dog dataset suggest owners slightly prefer dog of the same gender, maybe-Sean C. Crosby Blog</title>
+    <title>Do dog owners prefer dogs of the same gender?-Sean C. Crosby Blog</title>
 
     <link rel="canonical" href="/post/post004/">
 
@@ -162,7 +162,7 @@
                         </a>
                         
                     </div>
-                    <h1>P004 Swiss dog dataset suggest owners slightly prefer dog of the same gender, maybe</h1>
+                    <h1>Do dog owners prefer dogs of the same gender?</h1>
                     <h2 class="subheading">A quick EDA of popular dog colors, breeds, and preferences with a dataset of dogs and their owners from Switzerland.</h2>
                     <span class="meta">
                         
@@ -171,7 +171,7 @@
                                      &#34;Sean C. Crosby&#34;
                              
                             on 
-                            Tuesday, October 26, 2021
+                            Monday, November 1, 2021
                             
                             
                             
@@ -197,10 +197,13 @@
                 post-container">
 
                 
-                <p>I stumbled on this <a href="https://www.kaggle.com/kmader/dogs-of-zurich">dataset</a> on Kaggle of dogs and their owners in Switzerland. With a little help from google translation it becomes clear that there is a relatively substantial dataset of around 6,000 dogs and their owners including dog gender, dog breed, owner gender, owner age, and a few other bits of information. To practice working with pandas data frames and some simple regressions I entertained a few questions, such as, what is the most popular dog color?</p>
+                <h3 id="the-dogs-of-zurich">The dogs of Zurich</h3>
+<p>I stumbled on this <a href="https://www.kaggle.com/kmader/dogs-of-zurich">dataset</a> on Kaggle of dogs and their owners in Switzerland. With a little help from google translation it becomes clear that there is a relatively substantial dataset of around 6,000 dogs and their owners including dog gender, dog breed, owner gender, owner age, and a few other bits of information. To practice working with pandas data frames and some simple regressions I entertained a few questions, such as, what is the most popular dog color?</p>
+<h3 id="popular-colors-breeds">Popular colors, breeds</h3>
 <p>I would have guessed (hypothesized) brown, but the ranking shows that black (schwarz in German) is the most popular accounting for about 12% of dogs followed closely by tri-color, white and brown (8-10% each). This is accomplished easily with a groupby and count of items within each color group (Hundefarbe is color)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">breed <span style="color:#f92672">=</span> df1<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#34;HUNDEFARBE&#34;</span>)<span style="color:#f92672">.</span>count()
 </code></pre></div><p>Similarly the most popular breed was &ldquo;mixed small breed&rdquo; followed up by the chihuahua and Labrador retriever. I would never have guessed chihuahua was so popular!</p>
+<h3 id="dog-owners">Dog owners</h3>
 <p>I was also curious about the owners themselves, and while we don&rsquo;t know a lot, we do know there age. But first I needed to determine which records were of duplicate owners for multiple dogs. I created a unique list of owner IDs and added up the number of dogs each owner has. More on that later. But examining the distribution of owners ages look very plausible, with dog ownership appearing to peak from 41-60. However, we must take care here as we do not have the underlying age distribution of the population. This result is solely the number of dog owners in each age range.</p>
 <p>
   <img src="/img/dog_owner_age_distr.png" alt="owner age distribution">
@@ -211,8 +214,9 @@
   <img src="/img/dog_owner_age_distr_by_gender.png" alt="owner age distribution">
 
 </p>
+<h3 id="dog-owner-preferences">Dog owner preferences</h3>
 <p>While these questions have been difficult to nail down without some data on the population statistics, we can examine the question of whether owners in this dataset tend to prefer a dog of the same or opposite gender. A simple pivot of both owner and dog gender is a one-liner</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df1us<span style="color:#f92672">.</span>pivot_table(<span style="color:#e6db74">&#39;ALTER&#39;</span>,index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;GESCHLECHT&#39;</span>], columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;GESCHLECHT_HUND&#39;</span>],aggfunc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;count&#39;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df1us<span style="color:#f92672">.</span>pivot_table(<span style="color:#e6db74">&#39;ALTER&#39;</span>, index<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;GESCHLECHT&#39;</span>], columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;GESCHLECHT_HUND&#39;</span>], aggfunc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;count&#39;</span>)
 </code></pre></div><p>And the count shows that there may indeed be a slight preference for a same-sex dog, or in other words, men have slight preference for male dogs.</p>
 <table>
 <thead>
@@ -237,6 +241,7 @@
 </table>
 <p>We can determine if this preference is significant with a chi-2 test of the table above, often called a contingency table (scipy.stats.chi2_contingency). Here we are testing whether to reject the null hypothesis, which is that dog gender is independent of owner gender. The p-value estimate for the results above is around 1e-6, quite small, allowing us to reject the null hypothesis at an alpha much less than 0.05. So there is indeed a statistically significant preference for dogs of the same gender, and even if it is rather slight we can say that Men are about 8% more likely to own a male dog while women are about 5% more likely to own a female dog</p>
 <p>One more potentially interesting question I had was whether women or men tended to own more dogs, assuming they own at least one to make it into this dataset. The average number of dogs owned by men was 1.08 while the average number dogs owned by women was 1.12. Whether this difference is significant I am unsure, but it may point to women tending to own more dogs that men.</p>
+<h3 id="caveats">Caveats</h3>
 <p>At this point it is pertinent to bring up a major issue with this dataset and the conclusions based on gender. The dog owners here may be co-owners within a family or other partnership and such preferences above may simply be related to tendencies for one gender to be more likely to register the dog. Clearly more data is needed to really make these kinds of conclusions!</p>
 <p>For further details and references see my <a href="https://github.com/sccrosby/python_data_explorations/blob/main/eda_003_swissdogs_regressions.ipynb">python notebook</a></p>
 
@@ -247,13 +252,13 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/post/post003/" data-toggle="tooltip" data-placement="top" title="P003 Ray tracing for ocean wave transformation">&larr;
+                        <a href="/post/post003/" data-toggle="tooltip" data-placement="top" title="Ocean wave transformation with ray-path tracing">&larr;
                             Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/post/post005/" data-toggle="tooltip" data-placement="top" title="P005 Gaining intuition for different classifiers">Next
+                        <a href="/post/post002/" data-toggle="tooltip" data-placement="top" title="Dominant wind field patterns from complex empirical orthogonal functions">Next
                             Post &rarr;</a>
                     </li>
                     
@@ -303,6 +308,10 @@
                         </a>
                         
                         
+                        
+                        <a href="/tags/oceanography" title="oceanography">
+                            oceanography
+                        </a>
                         
                         
                         

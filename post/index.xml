@@ -6,50 +6,59 @@
     <description>Recent content in Posts on Sean C. Crosby</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sccrosby.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sccrosby.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>P005 Gaining intuition for different classifiers</title>
+      <title>Making wind forecast corrections with regressions and MLP networks</title>
+      <link>https://sccrosby.github.io/post/post006/</link>
+      <pubDate>Sun, 02 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sccrosby.github.io/post/post006/</guid>
+      <description>The idea Recent skill improvements in meteorological and ocean forecast have been by incorporating observations into model predictions. Numerical model development, by means of improved physical representations, is in many cases suffering from diminishing returns. While ensemble approaches (many) models are useful and provide uncertainty estimates, the assimilation of ever increasing data into models is needed. The folks over at Google&amp;rsquo;s Deep Mind more recently showed that deep neural networks could be used to accurately predict short-term (up to 90-minutes) precipitation events using prior radar observations (Nature article).</description>
+    </item>
+    
+    <item>
+      <title>Can we visualize decision space for different classifiers?</title>
       <link>https://sccrosby.github.io/post/post005/</link>
-      <pubDate>Fri, 31 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://sccrosby.github.io/post/post005/</guid>
       <description>Support Vector Machines (SVM) are seemingly derived from a intuitive concept, drawing a decision boundary with the widest margin (aka gutter, street, etc.). While this only really applies to the linear problem in which the data are indeed separable, I find it particularly helpful in visualizing the decision space of the model. Unlike a random forest or multi-layer neural network, it is easy to picture model space. While not a novel idea in the slightest, this provoked me to consider decision space for several classification algorithms to hopefully gain insight into other techniques, and with this insight select appropriate methods for future questions.</description>
     </item>
     
     <item>
-      <title>P004 Swiss dog dataset suggest owners slightly prefer dog of the same gender, maybe</title>
-      <link>https://sccrosby.github.io/post/post004/</link>
-      <pubDate>Tue, 26 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://sccrosby.github.io/post/post004/</guid>
-      <description>I stumbled on this dataset on Kaggle of dogs and their owners in Switzerland. With a little help from google translation it becomes clear that there is a relatively substantial dataset of around 6,000 dogs and their owners including dog gender, dog breed, owner gender, owner age, and a few other bits of information. To practice working with pandas data frames and some simple regressions I entertained a few questions, such as, what is the most popular dog color?</description>
-    </item>
-    
-    <item>
-      <title>P003 Ray tracing for ocean wave transformation</title>
-      <link>https://sccrosby.github.io/post/post003/</link>
-      <pubDate>Sun, 17 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://sccrosby.github.io/post/post003/</guid>
-      <description>Ray-tracing is a common tool in many fields from Magnetic resonance imaging (MRI) to ocean acoustics. In fact ocean acoustics are frequently employed to study whale and porpoise populations as well as detect boats or submarines. The concept is relatively simple, a wave traveling through a medium will bend or refract as its speed in the medium changes. And this is true for ocean waves, the ones you commonly see arriving at the shoreline.</description>
-    </item>
-    
-    <item>
-      <title>P002 Working with empirical orthogonal functions</title>
+      <title>Dominant wind field patterns from complex empirical orthogonal functions</title>
       <link>https://sccrosby.github.io/post/post002/</link>
-      <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 23 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://sccrosby.github.io/post/post002/</guid>
       <description>Today I was wondering if I can make some sense of a rather large 60-year hindcast of winds in Washington around the Salish Sea. Could I see what the typical wind patterns in the region are? How can I manage this with a rather hefty 1+GB set of spatial wind predictions? This is a good opportunity to explore empirical orthogonal functions (EOFs), also known as principle component analysis (PCA).</description>
     </item>
     
     <item>
-      <title>P001 Transitioning to data science</title>
+      <title>Do dog owners prefer dogs of the same gender?</title>
+      <link>https://sccrosby.github.io/post/post004/</link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sccrosby.github.io/post/post004/</guid>
+      <description>The dogs of Zurich I stumbled on this dataset on Kaggle of dogs and their owners in Switzerland. With a little help from google translation it becomes clear that there is a relatively substantial dataset of around 6,000 dogs and their owners including dog gender, dog breed, owner gender, owner age, and a few other bits of information. To practice working with pandas data frames and some simple regressions I entertained a few questions, such as, what is the most popular dog color?</description>
+    </item>
+    
+    <item>
+      <title>Ocean wave transformation with ray-path tracing</title>
+      <link>https://sccrosby.github.io/post/post003/</link>
+      <pubDate>Sun, 17 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sccrosby.github.io/post/post003/</guid>
+      <description>Ray tracing Ray-tracing is a common tool in many fields from Magnetic resonance imaging (MRI) to ocean acoustics. In fact ocean acoustics are frequently employed to study whale and porpoise populations as well as detect boats or submarines. The concept is relatively simple, a wave traveling through a medium will bend or refract as its speed in the medium changes. And this is true for ocean waves, the ones you commonly see arriving at the shoreline.</description>
+    </item>
+    
+    <item>
+      <title>Transitioning to data science</title>
       <link>https://sccrosby.github.io/post/post001/</link>
       <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://sccrosby.github.io/post/post001/</guid>
-      <description>This is the beginning of a data odyssey, re-tooling my background in oceanography to the rapidly evolving field of data science. After 10-years in the geosciences I am interested in pursuing something new, faster-paced, and more lucrative. I decided to write this blog, not necessarily expecting anyone to read it, but primarily for my own record keeping as I learn explore a new set of data analysis tools and whatever interesting datasets I can get my hands.</description>
+      <description>Re-tooling This is the beginning of a data odyssey, re-tooling my background in oceanography to the rapidly evolving field of data science. After 10-years in the geosciences I am interested in pursuing something new, faster-paced, and more lucrative. I decided to write this blog, not necessarily expecting anyone to read it, but primarily for my own record keeping as I learn explore a new set of data analysis tools and whatever interesting datasets I can get my hands.</description>
     </item>
     
   </channel>

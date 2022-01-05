@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="P005 Gaining intuition for different classifiers" />
-    <meta property="og:title" content="P005 Gaining intuition for different classifiers" />
-    <meta property="twitter:title" content="P005 Gaining intuition for different classifiers" />
+    <meta name="title" content="Can we visualize decision space for different classifiers?" />
+    <meta property="og:title" content="Can we visualize decision space for different classifiers?" />
+    <meta property="twitter:title" content="Can we visualize decision space for different classifiers?" />
     
 
     
@@ -34,7 +34,7 @@
     <meta name="keyword"  content="Python, Matlab, SQL, Oceanography, Machine Learning, Deep Learning, Neural Networks, Data Analysis, Inverse Theory">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>P005 Gaining intuition for different classifiers-Sean C. Crosby Blog</title>
+    <title>Can we visualize decision space for different classifiers?-Sean C. Crosby Blog</title>
 
     <link rel="canonical" href="/post/post005/">
 
@@ -166,8 +166,8 @@
                         </a>
                         
                     </div>
-                    <h1>P005 Gaining intuition for different classifiers</h1>
-                    <h2 class="subheading">Exploring decision space for simple to complex methods of classification using a toy dataset. We&#39;ll find that decision model boundaries will vary widely depending on model implementation and model settings</h2>
+                    <h1>Can we visualize decision space for different classifiers?</h1>
+                    <h2 class="subheading">Visualizing decision space for simple to complex methods of classification with a toy dataset. We&#39;ll find that decision model boundaries will vary widely depending on model implementation and model settings, providing some intuition for classifier selection</h2>
                     <span class="meta">
                         
                             Posted by 
@@ -175,7 +175,7 @@
                                      &#34;Sean C. Crosby&#34;
                              
                             on 
-                            Friday, December 31, 2021
+                            Tuesday, December 28, 2021
                             
                             
                             
@@ -250,7 +250,7 @@
   <img src="/img/eda006_fig08.png" alt="mlp network">
 
 </p>
-<h3 id="increasing-samples-data">Increasing samples (data)</h3>
+<h3 id="adding-data">Adding data</h3>
 <p>Varying models and some of their parameters was interesting, but we can also vary the dataset size. In general, adding data tends to improve the decision space of the model. Interestingly, in this case, the models that vary the least with additional data are the linear and non-linear SVC and MLP network. I&rsquo;d probably argue that the non-linear SVC may look the best, but with a train-dev-test approach I would not want to say what model is truly best. Clearly the solutions between models are different and do not tend to converge to a uniform solution with additional data (at least in the low data density regions), and that is what I find most interesting.</p>
 <p>
   <img src="/img/eda006_fig09.png" alt="varying data size">
@@ -294,10 +294,15 @@ MathJax.Hub.Config({
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/post/post004/" data-toggle="tooltip" data-placement="top" title="P004 Swiss dog dataset suggest owners slightly prefer dog of the same gender, maybe">&larr;
+                        <a href="/post/post002/" data-toggle="tooltip" data-placement="top" title="Dominant wind field patterns from complex empirical orthogonal functions">&larr;
                             Previous Post</a>
                     </li>
                     
+                    
+                    <li class="next">
+                        <a href="/post/post006/" data-toggle="tooltip" data-placement="top" title="Making wind forecast corrections with regressions and MLP networks">Next
+                            Post &rarr;</a>
+                    </li>
                     
                 </ul>
                 
@@ -345,6 +350,10 @@ MathJax.Hub.Config({
                         </a>
                         
                         
+                        
+                        <a href="/tags/oceanography" title="oceanography">
+                            oceanography
+                        </a>
                         
                         
                         

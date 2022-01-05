@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="P002 Working with empirical orthogonal functions" />
-    <meta property="og:title" content="P002 Working with empirical orthogonal functions" />
-    <meta property="twitter:title" content="P002 Working with empirical orthogonal functions" />
+    <meta name="title" content="Dominant wind field patterns from complex empirical orthogonal functions" />
+    <meta property="og:title" content="Dominant wind field patterns from complex empirical orthogonal functions" />
+    <meta property="twitter:title" content="Dominant wind field patterns from complex empirical orthogonal functions" />
     
 
     
@@ -34,7 +34,7 @@
     <meta name="keyword"  content="Python, Matlab, SQL, Oceanography, Machine Learning, Deep Learning, Neural Networks, Data Analysis, Inverse Theory">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>P002 Working with empirical orthogonal functions-Sean C. Crosby Blog</title>
+    <title>Dominant wind field patterns from complex empirical orthogonal functions-Sean C. Crosby Blog</title>
 
     <link rel="canonical" href="/post/post002/">
 
@@ -166,7 +166,7 @@
                         </a>
                         
                     </div>
-                    <h1>P002 Working with empirical orthogonal functions</h1>
+                    <h1>Dominant wind field patterns from complex empirical orthogonal functions</h1>
                     <h2 class="subheading">Using complex EOFs (aka PCA) to find common wind patterns</h2>
                     <span class="meta">
                         
@@ -175,7 +175,7 @@
                                      &#34;Sean C. Crosby&#34;
                              
                             on 
-                            Wednesday, October 13, 2021
+                            Tuesday, November 23, 2021
                             
                             
                             
@@ -205,6 +205,7 @@
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <p>Today I was wondering if I can make some sense of a rather large 60-year hindcast of winds in Washington around the Salish Sea. Could I see what the typical wind patterns in the region are? How can I manage this with a rather hefty 1+GB set of spatial wind predictions? This is a good opportunity to explore empirical orthogonal functions (EOFs), also known as principle component analysis (PCA).</p>
+<h3 id="empirical-orthogonal-functions">Empirical Orthogonal Functions</h3>
 <p>What is an EOF? An EOF is the decomposition of a data set in terms of orthogonal basis functions. This set of basis functions will contain all the information in the dataset, but broken into empirical functions that are most different from each other (orthogonal) and account for the most amount of variance as possible. These are typically ordered by the amount of variance accounted for, with the most the first in the matrix. In my example here I have 1271 grid locations (a 31 x 41 grid) and 89,000 time steps.</p>
 <p>Because of memory limitations, I&rsquo;ve restricted the EOF analysis to 20,000 time steps. Generating the orthogonal functions is just a single line, calling a function to perform a singular value decomposition (svd, available in numpy.linalg). I provide my 1271 x 20,000 element matrix of wind predictions, call it W, and what I end up with is three matrices, U, S, and V, such that</p>
 <p>$$W = USV^T ,$$</p>
@@ -213,12 +214,14 @@
   <img src="/img/wind_eof_plot.png" alt="Example image">
 
 </p>
+<h3 id="the-geographical-setting">The geographical setting</h3>
 <p>Here you can see some relatively large patterns that are typical of the region. Mode 1 representing onshore flow from the ocean and offshore flow from land. Mode 2 shows similar onshore flow but with more southerly flow inland. Mode 3 shows a strong north flow offshore at higher latitudes and southward flow at lower latitudes showing a divergence region just below the Strait of Juan de Fuca. To help illustrate, for lack of basemap, the three modes are show below</p>
 <p>
   <img src="/img/wind_eof_map.png" alt="Example image">
 
 </p>
 <p>What I really enjoyed seeing was the effects of the Olympic mountains on winds just to the East. You can see what looks like a swirl in all of the modes. Wrapping up I&rsquo;ll link an interactive html file <a href="https://github.com/sccrosby/python_data_explorations/blob/main/wind_eof_map.html">here</a> and the jupyter notebook used in the analysis described is <a href="https://github.com/sccrosby/python_data_explorations/blob/main/eda_002_eof_wind_field.ipynb">here</a>. If you&rsquo;d like data please get in touch.</p>
+<h3 id="what-makes-it-complex">What makes it complex?</h3>
 <p>An aside that I didn&rsquo;t mention above. Wind vectors have two components whereas what is described above assumes just a single value, like say winds speed. However, with a vector you can use complex notation to represent the two dimensions under a single matrix such that</p>
 <p>$$\hat{u} = u + iv.$$</p>
 <p>Here, the northward component, v, is imaginary. The computation is the same, but at the end you&rsquo;ll need to take the real and imaginary parts to recreate the vector. And note that instead of normal transpose above, the hermitian transpose is need that additionally takes the complex conjugate of V.</p>
@@ -230,13 +233,13 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/post/post001/" data-toggle="tooltip" data-placement="top" title="P001 Transitioning to data science">&larr;
+                        <a href="/post/post004/" data-toggle="tooltip" data-placement="top" title="Do dog owners prefer dogs of the same gender?">&larr;
                             Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/post/post003/" data-toggle="tooltip" data-placement="top" title="P003 Ray tracing for ocean wave transformation">Next
+                        <a href="/post/post005/" data-toggle="tooltip" data-placement="top" title="Can we visualize decision space for different classifiers?">Next
                             Post &rarr;</a>
                     </li>
                     
@@ -286,6 +289,10 @@
                         </a>
                         
                         
+                        
+                        <a href="/tags/oceanography" title="oceanography">
+                            oceanography
+                        </a>
                         
                         
                         
